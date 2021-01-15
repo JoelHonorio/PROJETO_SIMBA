@@ -4,7 +4,7 @@
 
 <main class="form-signin">
     <form>
-        <img class="mb-2" src="../../assets/img/login/logo.svg" width="230" height="230">
+        <img class="mb-2" src="../../assets/img/login/logo_V2.svg" width="230" height="230">
 
         <label for="inputEmail" class="visually-hidden">E-mail</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required>
@@ -18,7 +18,7 @@
             </label>
         </div>
 
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Logar</button>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
     </form>
 </main>
 
