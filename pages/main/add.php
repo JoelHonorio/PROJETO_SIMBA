@@ -14,22 +14,22 @@
 
 						<div class="col-sm-6">
 							<label for="nome" class="form-label">Nome</label>
-							<input type="text" class="form-control" name="nome" id="nome" placeholder="" required>
+							<input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" required>
 						</div>
 
 						<div class="col-sm-6">
 							<label for="sobrenome" class="form-label">Sobrenome</label>
-							<input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="" required>
+							<input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="Sobrenome" required>
 						</div>
 
 						<div class="col-12">
 							<label for="email" class="form-label">E-mail</label>
-							<input type="email" class="form-control" name="email" id="email" placeholder="you@example.com">
+							<input type="email" class="form-control" name="email" id="email" placeholder="email@email.com">
 						</div>
 
 						<div class="col-12">
 							<label for="idade" class="form-label">Idade</label>
-							<input type="text" class="form-control" name="idade" id="idade" placeholder="1234 Main St" required>
+							<input type="text" class="form-control" name="idade" id="idade" placeholder="Idade" required>
 						</div>
 
 					</div>
@@ -38,12 +38,12 @@
 
 					<div class="row" style="margin-bottom: 3%;">
 
-						<div class="col-6" style="margin-left: 0px;">
-							<button class="w-100 btn btn-success btn-lg" name="btn-cadastrar" type="submit">Cadastrar</button>
-						</div>
-
 						<div class="col-6" style="margin-right: 0px;">
 							<a href="index.php" type="submit" class="w-100 btn btn-primary btn-lg">Voltar</a>
+						</div>
+
+						<div class="col-6" style="margin-left: 0px;">
+							<button class="w-100 btn btn-success btn-lg" name="btn-cadastrar" type="submit">Cadastrar</button>
 						</div>
 
 					</div>

@@ -37,8 +37,8 @@
 
 					<td style="text-align: center;">
 					
-						<a href="edit.php?id=<?php echo $dados['id']; ?>">Editar</a>
-						<a href="#modal<?php echo $dados['id']; ?>">Deletar</a>
+						<a href="edit.php?id=<?php echo $dados['id']; ?>"><i class="material-icons" style="color: primary;">create</i></a>
+						<a href="#modal<?php echo $dados['id']; ?>"><i class="material-icons" style="color: red;">delete_sweep</i></a>
 				
 					</td>
 				
@@ -75,7 +75,9 @@
 			
 		</table>
 
-		<div class="col-6" style="margin-bottom: 3%;">
+		<hr class="my-4">
+
+		<div class="col-6" style="margin-bottom: 3%; margin-left: auto; margin-right: auto;">
 			<a href="add.php" type="submit" class="w-100 btn btn-primary btn-lg">Adicionar Cliente</a>
 		</div>
 
