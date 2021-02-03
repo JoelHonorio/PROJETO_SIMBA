@@ -17,12 +17,12 @@ if(isset($_POST['btn-editar'])):
 
 	if(mysqli_query($connect, $sql)):
 
-		$_SESSION['mensagem'] = "Atualizado com sucesso!";
+		echo "Edição realizada com sucesso!";
 		header('Location: ../pages/main/index.php');
 
 	else:
 
-		$_SESSION['mensagem'] = "Erro ao Atualizar!";
+		echo "Erro ao editar o usuário.";
 		header('Location: ../pages/main/index.php');
 
 	endif;

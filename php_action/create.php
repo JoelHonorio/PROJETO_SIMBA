@@ -15,12 +15,12 @@ if(isset($_POST['btn-cadastrar'])):
 	
 	if(mysqli_query($connect, $sql)):
 
-		$_SESSION['mensagem'] = "Cadastrado com sucesso!";
+		echo "Cadastro realizado com sucesso!";
 		header('Location: ../pages/main/index.php');
 
 	else:
 
-		$_SESSION['mensagem'] = "Erro no cadastro!";
+		echo "Erro ao cadastrar o usuário.";
 		header('Location: ../pages/main/index.php');
 
 	endif;

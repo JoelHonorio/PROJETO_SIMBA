@@ -1,8 +1,7 @@
 <?php 
     require_once '../../php_action/db_connect.php';
-    require_once '../global/message.php';
     include_once '../global/header.php';
-    include_once '../global/navbar.php'; 
+    include_once '../global/navbar.php';
 ?>
 
 <div class="container-fluid bg-light rounded" style="margin-top: 5%;  text-align: left;">
@@ -38,23 +37,9 @@
 					<td style="text-align: center;">
 					
 						<a href="edit.php?id=<?php echo $dados['id']; ?>"><i class="material-icons" style="color: primary;">create</i></a>
-						<a href="#modal<?php echo $dados['id']; ?>"><i class="material-icons" style="color: red;">delete_sweep</i></a>
+						<a href="del.php?id=<?php echo $dados['id']; ?>"><i class="material-icons" style="color: red;">delete_sweep</i></a>
 				
 					</td>
-				
-					<div id="modal<?php echo $dados['id']; ?>" class="modal">
-						<div class="modal-content">
-							<h4>Opa!</h4>
-							<p>Tem certeza que deseja excluir este cliente?</p>
-						</div>
-						<div class="modal-footer">
-							<form action="../../php_action/delete.php" method="POST">
-								<input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
-								<button type="submit" name="btn-deletar" class="btn red">Sim quero deletar</button>
-								<a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-							</form>
-						</div>
-					</div>
 					
 				</tr>
 				<?php

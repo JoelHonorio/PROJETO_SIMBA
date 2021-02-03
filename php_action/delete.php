@@ -12,13 +12,14 @@ if(isset($_POST['btn-deletar'])):
 
 	if(mysqli_query($connect, $sql)):
 
-		$_SESSION['mensagem'] = "Deletado com sucesso!";
+		echo "Exclusão realizada com sucesso!";
 		header('Location: ../pages/main/index.php');
 
 	else:
 
-		$_SESSION['mensagem'] = "Erro ao deletar!";
+		echo "Erro ao excluir o usuário.";
 		header('Location: ../pages/main/index.php');
 
 	endif;
+
 endif;
