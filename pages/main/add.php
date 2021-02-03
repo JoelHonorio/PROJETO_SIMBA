@@ -7,7 +7,7 @@
 	<main>
 		<div class="row g-3">
 			<div class="col-md-7 col-lg-8" style="margin: 0 auto;">
-				<h4 class="mb-3" style="margin-top: 3%;">Cadastrar Cliente</h4>
+				<h4 class="mb-3" style="margin-top: 3%;">Novo Cadastro</h4>
 				<form action="../../php_action/create.php" method="POST">
 
 					<div class="row g-3">
@@ -24,12 +24,17 @@
 
 						<div class="col-12">
 							<label for="email" class="form-label">E-mail</label>
-							<input type="email" class="form-control" name="email" id="email" placeholder="email@email.com">
+							<input type="email" class="form-control" name="email" id="email" placeholder="email@email.com" required>
 						</div>
 
-						<div class="col-12">
-							<label for="idade" class="form-label">Idade</label>
-							<input type="text" class="form-control" name="idade" id="idade" placeholder="Idade" required>
+						<div class="col-sm-6">
+							<label for="senha" class="form-label">Senha</label>
+							<input type="password" class="form-control" name="senha" id="senha" placeholder="Senha" required>
+						</div>
+
+						<div class="col-sm-6">
+							<label for="senha_c" class="form-label">Repita a senha</label>
+							<input type="password" class="form-control" name="senha_c" id="senha_c" placeholder="Repita a senha" required>
 						</div>
 
 					</div>

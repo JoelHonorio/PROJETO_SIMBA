@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Jan-2021 às 03:37
+-- Tempo de geração: 03-Fev-2021 às 03:56
 -- Versão do servidor: 10.4.14-MariaDB
 -- versão do PHP: 7.4.11
 
@@ -18,38 +18,39 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `crud`
+-- Banco de dados: `simba`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `clientes`
+-- Estrutura da tabela `usuario`
 --
 
-CREATE TABLE `clientes` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `sobrenome` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `idade` int(3) NOT NULL
+CREATE TABLE `usuario` (
+  `id` int(100) NOT NULL,
+  `nome` varchar(300) NOT NULL,
+  `sobrenome` varchar(300) NOT NULL,
+  `email` varchar(300) NOT NULL,
+  `senha` varchar(100) NOT NULL,
+  `senha_c` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `clientes`
+-- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `clientes` (`id`, `nome`, `sobrenome`, `email`, `idade`) VALUES
-(20, 'Joel', 'Honorio', 'joel.honorio.r34@gmail.com', 20);
+INSERT INTO `usuario` (`id`, `nome`, `sobrenome`, `email`, `senha`, `senha_c`) VALUES
+(1, 'Joel', 'Honório', 'joel.honorio.r34@gmail.com', '123456789', '123456789');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `clientes`
+-- Índices para tabela `usuario`
 --
-ALTER TABLE `clientes`
+ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -57,10 +58,10 @@ ALTER TABLE `clientes`
 --
 
 --
--- AUTO_INCREMENT de tabela `clientes`
+-- AUTO_INCREMENT de tabela `usuario`
 --
-ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+ALTER TABLE `usuario`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

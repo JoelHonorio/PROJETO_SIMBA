@@ -6,7 +6,7 @@
 	if(isset($_GET['id'])):
 
 		$id = mysqli_escape_string($connect, $_GET['id']);
-		$sql = "SELECT * FROM clientes WHERE id = '$id'";
+		$sql = "SELECT * FROM usuario WHERE id = '$id'";
 		$resultado = mysqli_query($connect, $sql);
 		$dados = mysqli_fetch_array($resultado);
 
@@ -37,12 +37,17 @@
 
 						<div class="col-12">
 							<label for="email" class="form-label">E-mail</label>
-							<input type="email" class="form-control" name="email" id="email" value="<?php echo $dados['email'] ?>" placeholder="email@email.com">
+							<input type="email" class="form-control" name="email" id="email" value="<?php echo $dados['email'] ?>" placeholder="email@email.com" required>
 						</div>
 
-						<div class="col-12">
-							<label for="idade" class="form-label">Idade</label>
-							<input type="text" class="form-control" name="idade" id="idade" value="<?php echo $dados['idade'] ?>" placeholder="Idade" required>
+						<div class="col-sm-6">
+							<label for="senha" class="form-label">Senha</label>
+							<input type="password" class="form-control" name="senha" id="senha" value="<?php echo $dados['senha'] ?>" placeholder="Senha" required>
+						</div>
+
+						<div class="col-sm-6">
+							<label for="senha_c" class="form-label">Repita a senha</label>
+							<input type="password" class="form-control" name="senha_c" id="senha_c" value="<?php echo $dados['senha_c'] ?>" placeholder="Repita a senha" required>
 						</div>
 
 					</div>

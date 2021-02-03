@@ -6,7 +6,7 @@
 	if(isset($_GET['id'])):
 
 		$id = mysqli_escape_string($connect, $_GET['id']);
-		$sql = "SELECT * FROM clientes WHERE id = '$id'";
+		$sql = "SELECT * FROM usuario WHERE id = '$id'";
 		$resultado = mysqli_query($connect, $sql);
 		$dados = mysqli_fetch_array($resultado);
 
@@ -37,12 +37,7 @@
 
 						<div class="col-12">
 							<label for="email" class="form-label">E-mail</label>
-							<input type="email" class="form-control" name="email" id="email" value="<?php echo $dados['email'] ?>" placeholder="email@email.com" disabled>
-						</div>
-
-						<div class="col-12">
-							<label for="idade" class="form-label">Idade</label>
-							<input type="text" class="form-control" name="idade" id="idade" value="<?php echo $dados['idade'] ?>" placeholder="Idade" required disabled>
+							<input type="email" class="form-control" name="email" id="email" value="<?php echo $dados['email'] ?>" placeholder="email@email.com" required disabled>
 						</div>
 
 					</div>

@@ -3,7 +3,7 @@
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
-$db_name = "crud";
+$db_name = "simba";
 
 $connect = mysqli_connect($servername, $username, $password, $db_name);
 
