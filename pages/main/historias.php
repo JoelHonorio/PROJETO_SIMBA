@@ -7,11 +7,12 @@
 <div class="container-fluid bg-light rounded" style="margin-top: 5%;  text-align: left;">
   <div class="row">
     <main class="col-md-12 col-lg-10 px-md-4" style="margin: 0 auto;">
-      <h2 style="margin-top: 3%;">Histórias</h2></br>
+      <h2 style="margin-top: 3%; text-align: center;">Histórias</h2></br>
       <div class="table-responsive">
         <table class="table table-striped table-sm" style="margin-bottom: 3%;">
           <thead>
             <tr>
+			  <th>Story</th>
               <th>Quem?</th>
               <th>Gostaria de</th>
 			  <th>Pois eu quero</th>
@@ -28,6 +29,7 @@
 					while($dados = mysqli_fetch_array($resultado)):
 				?>
 				<tr>
+					<td><?php echo $dados['story']; ?></td>
 					<td><?php echo $dados['quem']; ?></td>
 					<td><?php echo $dados['gostaria']; ?></td>
 					<td><?php echo $dados['poisquero']; ?></td>
@@ -45,6 +47,7 @@
 					else:
 				?>
 				<tr>
+					<td>-</td>
 					<td>-</td>
 					<td>-</td>
 					<td>-</td>
