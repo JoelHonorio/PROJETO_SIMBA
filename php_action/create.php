@@ -27,3 +27,27 @@ if(isset($_POST['btn-cadastrar'])):
 	endif;
 
 endif;
+
+if(isset($_POST['btn-adicionarhistoria'])):
+
+	$story = mysqli_escape_string($connect, $_POST['story']);
+	$quem = mysqli_escape_string($connect, $_POST['quem']);
+	$gostaria = mysqli_escape_string($connect, $_POST['gostaria']);
+	$poisquero = mysqli_escape_string($connect, $_POST['poisquero']);
+
+
+	$sql = "INSERT INTO historias (story, quem, gostaria, poisquero) VALUES ('$story', '$quem', '$gostaria', '$poisquero')";
+	
+	if(mysqli_query($connect, $sql)):
+
+		echo "Cadastro realizado com sucesso!";
+		header('Location: ../pages/main/historias.php');
+
+	else:
+
+		echo "Erro ao cadastrar a história.";
+		header('Location: ../pages/main/index.php');
+
+	endif;
+
+endif;

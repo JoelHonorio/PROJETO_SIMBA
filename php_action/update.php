@@ -29,3 +29,27 @@ if(isset($_POST['btn-editar'])):
 	endif;
 
 endif;
+
+if(isset($_POST['btn-editarhistoria'])):
+
+	$quem = mysqli_escape_string($connect, $_POST['quem']);
+	$gostaria = mysqli_escape_string($connect, $_POST['gostaria']);
+	$poisquero = mysqli_escape_string($connect, $_POST['poisquero']);
+
+	$story = mysqli_escape_string($connect, $_POST['story']);
+
+	$sql = "UPDATE historias SET quem = '$quem', gostaria = '$gostaria', poisquero = '$poisquero' WHERE story = '$story'";
+
+	if(mysqli_query($connect, $sql)):
+
+		echo "Edição realizada com sucesso!";
+		header('Location: ../pages/main/historias.php');
+
+	else:
+
+		echo "Erro ao editar o usuário.";
+		header('Location: ../pages/main/historias.php');
+
+	endif;
+
+endif;

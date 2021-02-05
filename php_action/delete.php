@@ -23,3 +23,23 @@ if(isset($_POST['btn-deletar'])):
 	endif;
 
 endif;
+
+if(isset($_POST['btn-deletarhistoria'])):
+	
+	$story = mysqli_escape_string($connect, $_POST['story']);
+
+	$sql = "DELETE FROM historias WHERE story = '$story'";
+
+	if(mysqli_query($connect, $sql)):
+
+		echo "Exclusão realizada com sucesso!";
+		header('Location: ../pages/main/historias.php');
+
+	else:
+
+		echo "Erro ao excluir a História.";
+		header('Location: ../pages/main/historias.php');
+
+	endif;
+
+endif;
