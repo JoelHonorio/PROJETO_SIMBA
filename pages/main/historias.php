@@ -1,7 +1,13 @@
 <?php 
-    require_once '../../php_action/db_connect.php';
-    include_once '../global/header.php';
-    include_once '../global/navbar.php'; 
+require_once '../../php_action/db_connect.php';
+session_start();
+
+if(!isset($_SESSION['logado'])):
+	header('Location: ../login/login.php');
+endif;
+
+include_once '../global/header.php';
+include_once '../global/navbar.php'; 
 ?>
 
 <div class="container-fluid bg-light rounded" style="margin-top: 5%;  text-align: left;">

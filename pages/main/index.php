@@ -1,5 +1,16 @@
 <?php 
     require_once '../../php_action/db_connect.php';
+	session_start();
+
+	if(!isset($_SESSION['logado'])):
+		header('Location: ../login/login.php');
+	endif;
+
+	$id = $_SESSION['id_usuario'];
+	$sql = "select * from usuario where id = '$id'";
+	$resultado = mysqli_query($connect, $sql);
+	$dados = mysqli_fetch_array($resultado);
+
     include_once '../global/header.php';
     include_once '../global/navbar.php';
 ?>
@@ -7,7 +18,8 @@
 <div class="container-fluid bg-light rounded" style="margin-top: 5%; text-align: left;">
   <div class="row">
     <main class="col-md-9 col-lg-10 px-md-4" style="margin: 0 auto;">
-      <h2 style="margin-top: 3%; text-align: center;">Usuários</h2></br>
+	<h2 style="margin-top: 3%; text-align: left;">Bem Vindo <?php echo $dados['nome'] ?></h2></br>
+      <h2 style="text-align: center;">Usuários</h2></br>
       <div class="table-responsive">
         <table class="table table-striped table-sm" style="margin-bottom: 3%;">
           <thead>

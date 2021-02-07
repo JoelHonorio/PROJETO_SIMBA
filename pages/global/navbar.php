@@ -25,6 +25,10 @@
             <li><a class="dropdown-item" href="#">Infos adicionais</a></li>
           </ul>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="../../php_action/out.php">Sair</a>
+        </li>
         
       </ul>
     </div>
