@@ -53,3 +53,27 @@ if(isset($_POST['btn-editarhistoria'])):
 	endif;
 
 endif;
+
+if(isset($_POST['btn-editarhistdetal'])):
+
+	$poisquero = mysqli_escape_string($connect, $_POST['poisquero']);
+	$detalhamento = mysqli_escape_string($connect, $_POST['detalhamento']);
+	$responsavel = mysqli_escape_string($connect, $_POST['responsavel']);
+
+	$id = mysqli_escape_string($connect, $_POST['id']);
+
+	$sql = "UPDATE histdetalhada SET id = '$id', poisquero = '$poisquero', detalhamento = '$detalhamento', responsavel = '$responsavel' WHERE id = '$id'";
+
+	if(mysqli_query($connect, $sql)):
+
+		echo "Edição realizada com sucesso!";
+		header('Location: ../pages/main/histdetal.php');
+
+	else:
+
+		echo "Erro ao editar o usuário.";
+		header('Location: ../pages/main/histdetal.php');
+
+	endif;
+
+endif;

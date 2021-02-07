@@ -51,3 +51,27 @@ if(isset($_POST['btn-adicionarhistoria'])):
 	endif;
 
 endif;
+
+if(isset($_POST['btn-adicionarhistdetal'])):
+
+	$id = mysqli_escape_string($connect, $_POST['id']);
+	$poisquero = mysqli_escape_string($connect, $_POST['poisquero']);
+	$detalhamento = mysqli_escape_string($connect, $_POST['detalhamento']);
+	$responsavel = mysqli_escape_string($connect, $_POST['responsavel']);
+
+
+	$sql = "INSERT INTO histdetalhada (id, poisquero, detalhamento, responsavel) VALUES ('$id', '$poisquero', '$detalhamento', '$responsavel')";
+	
+	if(mysqli_query($connect, $sql)):
+
+		echo "Cadastro realizado com sucesso!";
+		header('Location: ../pages/main/histdetal.php');
+
+	else:
+
+		echo "Erro ao cadastrar a história.";
+		header('Location: ../pages/main/histdetal.php');
+
+	endif;
+
+endif;

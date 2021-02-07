@@ -15,7 +15,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Histórias detalhadas</a>
+          <a class="nav-link" href="../main/histdetal.php">História Refinada</a>
         </li>
 
         <li class="nav-item dropdown">

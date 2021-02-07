@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Fev-2021 às 22:36
--- Versão do servidor: 10.4.14-MariaDB
--- versão do PHP: 7.4.11
+-- Tempo de geração: 08-Fev-2021 às 00:14
+-- Versão do servidor: 10.4.17-MariaDB
+-- versão do PHP: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,24 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `simba`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `histdetalhada`
+--
+
+CREATE TABLE `histdetalhada` (
+  `id` int(2) NOT NULL,
+  `poisquero` text NOT NULL,
+  `detalhamento` text NOT NULL,
+  `responsavel` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `histdetalhada`
+--
+
 
 -- --------------------------------------------------------
 
@@ -64,6 +82,12 @@ INSERT INTO `usuario` (`id`, `nome`, `sobrenome`, `email`, `senha`, `senha_c`) V
 --
 
 --
+-- Índices para tabela `histdetalhada`
+--
+ALTER TABLE `histdetalhada`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices para tabela `historias`
 --
 ALTER TABLE `historias`
@@ -78,6 +102,12 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT de tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `histdetalhada`
+--
+ALTER TABLE `histdetalhada`
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `historias`

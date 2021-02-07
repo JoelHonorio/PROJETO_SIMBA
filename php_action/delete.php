@@ -43,3 +43,23 @@ if(isset($_POST['btn-deletarhistoria'])):
 	endif;
 
 endif;
+
+if(isset($_POST['btn-deletarhistdetal'])):
+	
+	$id = mysqli_escape_string($connect, $_POST['id']);
+
+	$sql = "DELETE FROM histdetalhada WHERE id = '$id'";
+
+	if(mysqli_query($connect, $sql)):
+
+		echo "Exclusão realizada com sucesso!";
+		header('Location: ../pages/main/histdetal.php');
+
+	else:
+
+		echo "Erro ao excluir a História.";
+		header('Location: ../pages/main/histdetal.php');
+
+	endif;
+
+endif;
