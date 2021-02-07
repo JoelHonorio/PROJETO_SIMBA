@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05-Fev-2021 às 01:07
+-- Tempo de geração: 07-Fev-2021 às 22:36
 -- Versão do servidor: 10.4.14-MariaDB
 -- versão do PHP: 7.4.11
 
@@ -34,13 +34,6 @@ CREATE TABLE `historias` (
   `poisquero` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Extraindo dados da tabela `historias`
---
-
-INSERT INTO `historias` (`story`, `quem`, `gostaria`, `poisquero`) VALUES
-(5, 'Joãozinho', 'Uma página integrada de sessão', 'Finalizar o projeto');
-
 -- --------------------------------------------------------
 
 --
@@ -61,8 +54,10 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `nome`, `sobrenome`, `email`, `senha`, `senha_c`) VALUES
-(1, 'Joel', 'Honório', 'joel.salvador.dali@gmail.com', '123456789', '123456789'),
-(4, 'Gabriel', 'Souza', 'gabriel.salva.nois.ai@outlook.com', '123456789', '123456789');
+(1, 'Joel', 'Honório', 'joel@gmail.com', '123456', '123456'),
+(2, 'Gabriel', 'Souza', 'gabriel@gmail.com', '123456', '123456'),
+(3, 'Administrador', 'Administrador', 'admin@gmail.com', '123456', '123456'),
+(4, 'Rebeka', 'Leticia', 'rebeka@gmail.com', '123456', '123456');
 
 --
 -- Índices para tabelas despejadas
@@ -88,13 +83,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `historias`
 --
 ALTER TABLE `historias`
-  MODIFY `story` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `story` int(2) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
