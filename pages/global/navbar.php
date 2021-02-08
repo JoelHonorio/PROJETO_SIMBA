@@ -18,14 +18,6 @@
           <a class="nav-link" href="../main/histdetal.php">História Refinada</a>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-bs-toggle="dropdown" aria-expanded="false">Mais</a>
-          <ul class="dropdown-menu" aria-labelledby="dropdown09">
-            <li><a class="dropdown-item" href="#">Configurações</a></li>
-            <li><a class="dropdown-item" href="#">Infos adicionais</a></li>
-          </ul>
-        </li>
-
         <li class="nav-item">
           <a class="nav-link" href="../../php_action/out.php">Sair</a>
         </li>

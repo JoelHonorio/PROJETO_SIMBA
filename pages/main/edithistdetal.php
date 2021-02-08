@@ -34,7 +34,7 @@
 
 						<div class="col-sm-6">
 							<label for="id" class="form-label">História</label>
-							<input type="text" class="form-control" name="id" id="id" placeholder="id" value="<?php echo $dados['id'] ?>" required>
+							<input type="text" class="form-control" name="id" id="id" placeholder="id" value="<?php echo $dados['id'] ?>" disabled required>
 						</div>
 
 						<div class="col-6">
